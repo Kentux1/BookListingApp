@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Book Listing App</string>
+    <string name="no_internet">No internet connection.</string>
+    <string name="query_hint">Search using keywords, title, author, etc.</string>
+</resources>
