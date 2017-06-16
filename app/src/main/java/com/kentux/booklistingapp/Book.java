@@ -3,10 +3,10 @@ package com.kentux.booklistingapp;
 public class Book {
     private String mTitle;
     private String mAuthor;
-    private double mRating;
+    private String mRating;
     private String mBookUrl;
 
-    public Book(String title, String author, double rating, String bookUrl) {
+    public Book(String title, String author, String rating, String bookUrl) {
         mTitle = title;
         mAuthor = author;
         mRating = rating;
@@ -21,7 +21,7 @@ public class Book {
         return mAuthor;
     }
 
-    public double getRating() {
+    public String getRating() {
         return mRating;
     }
 

@@ -129,8 +129,12 @@ public class QueryUtils {
                 JSONObject volumeInfo = currentBook.getJSONObject("volumeInfo");
 
                 // Extract the value for the key called "rating"
-                double rating = volumeInfo.getDouble("averageRating");
-
+                String rating;
+                if(volumeInfo.has("averageRating")) {
+                    rating = volumeInfo.getString("averageRating");
+                } else {
+                    rating = " ";
+                }
                 // Extract the value for the key called "title"
                 String title = volumeInfo.getString("title");
 

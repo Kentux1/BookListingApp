@@ -32,18 +32,12 @@ public class BookAdapter extends ArrayAdapter<Book> {
         Book currentBook = getItem(position);
 
         TextView ratingsView = (TextView) listItemView.findViewById(R.id.ratings);
-            String formattedRating = formatRating(currentBook.getRating());
-            ratingsView.setText(formattedRating);
+        ratingsView.setText(currentBook.getRating());
         TextView titleView = (TextView) listItemView.findViewById(R.id.title);
         titleView.setText(currentBook.getTitle());
 
         TextView authorView = (TextView) listItemView.findViewById(R.id.author);
         authorView.setText(currentBook.getAuthor());
         return listItemView;
-    }
-
-    private String formatRating(double rating) {
-        DecimalFormat ratingFormat = new DecimalFormat("0.0");
-        return ratingFormat.format(rating);
     }
 }
